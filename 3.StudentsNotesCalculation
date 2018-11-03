@@ -52,4 +52,3 @@ students = [lloyd, alice, tyler]
 avg = get_class_average(students)
 print(avg)
 print(get_letter_grade(avg))
-
