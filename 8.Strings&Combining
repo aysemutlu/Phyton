@@ -1,0 +1,22 @@
+T = int(input())
+for i in range(0, T):
+    S = input()
+    even = []
+    odd = []
+    item = 0
+    while item < len(S):
+
+        if item %2 == 0: 
+            even.append(S[item])
+        else:
+            odd.append(S[item])   
+        item += 1
+    
+    a = ""
+    b = ""
+    for each_e in even:
+        a += each_e
+    for each_o in odd:
+        b += each_o
+    
+    print("{} {}".format(a, b)) 
