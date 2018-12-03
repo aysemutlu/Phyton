@@ -1,0 +1,12 @@
+#n: 4
+#input: 1 4 3 2 // output should be 2 3 4 1
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    arr.reverse()
+    
+    #print(arr) //print as an array
+    
+    print(*arr) //print as a single line of space-separated numbers
