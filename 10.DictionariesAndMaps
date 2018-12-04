@@ -1,0 +1,25 @@
+"""n=3 
+input_phonebook:
+  sam 99912222
+  tom 11122222
+  harry 12299933
+input_name:
+  sam
+  edward
+  harry
+"""
+n = int(input())
+import sys
+
+phoneBook = {}
+for i in range(n):
+    contact = input().split(' ')
+    phoneBook[contact[0]] = contact[1]
+lines = sys.stdin.readlines()
+
+for i in lines:
+    name = i.strip()
+    if name in phoneBook:
+        print(name + '=' + str(phoneBook[name]))
+    else:
+        print('Not found')
