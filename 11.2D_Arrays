@@ -1,0 +1,23 @@
+#Finding the hourglass with the maximum sum 
+
+if __name__ == '__main__':
+    arr = []
+
+    for _ in range(6):
+        arr.append(list(map(int, input().rstrip().split())))
+
+
+total = 0
+for i in range(len(arr)-2):
+    for j in range(len(arr)-2):
+        sum1 = 0
+        
+        sum1 = arr[i][j]+arr[i][j+1]+arr[i][j+2]
+        sum1 += arr[i+1][j+1]
+        sum1 += arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2]
+        #print(sum1)
+        #print(total)
+        if sum1>total:
+            total = sum1
+
+print(total)
